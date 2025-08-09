@@ -104,6 +104,6 @@ def send_to_telegram(token,chat_id,img_path,caption):
         resp=requests.post(url,data=data,files=files,timeout=30)
     resp.raise_for_status()
     return resp.json()
-send_to_telegram(TG_TOKEN,TG_CHAT,"qrcode.png",f"{captiondate} QRCode")
+send_to_telegram(TG_TOKEN,TG_CHAT,"qrcode.png",f"Good Morning Sagar!\nHere's your QRCode for the day\n{captiondate}")
 driver.quit()
 
