@@ -1,0 +1,12 @@
+# Ignore virtual environment
+venv/
+
+# Ignore environment variables
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore QR code image (optional if you don’t want to push it)
+qrcode.png
