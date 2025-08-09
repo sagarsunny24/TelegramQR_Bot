@@ -24,6 +24,7 @@ TG_CHAT=os.getenv("TELEGRAM_CHAT_ID")
 
 options=Options()
 options.add_argument("--disable-gpu")
+options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--headless=new")
 options.add_argument("--no-sandbox")
 options.add_argument("--start-maximized")
@@ -103,6 +104,6 @@ def send_to_telegram(token,chat_id,img_path,caption):
         resp=requests.post(url,data=data,files=files,timeout=30)
     resp.raise_for_status()
     return resp.json()
-send_to_telegram(TG_TOKEN,TG_CHAT,"qrcode.png","Love you adithyan")
+send_to_telegram(TG_TOKEN,TG_CHAT,"qrcode.png",f"{captiondate} QRCode")
 driver.quit()
 
