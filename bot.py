@@ -72,7 +72,7 @@ submit=driver.find_element(By.XPATH,"//button[@type='submit']")
 submit.click()
 
 #finding and pressing the qrbtn
-qr_btn=wait.until(EC.presence_of_element_located((By.XPATH,"//button[span[contains(normalize-space(text()),'QRCode')]]")))
+qr_btn=wait.until(EC.presence_of_element_located((By.XPATH, "//button[.//span[text()='QRCode']]")))
 qr_btn.click()
 
 #wait and get the src of the qr image
